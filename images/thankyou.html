@@ -1,0 +1,197 @@
+<!doctype html>  
+<html>  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="art asia Limited, art asia, east asian art, asian art, asian art consultancy, Chinese work of art, chinese antique, art book publisher, art investment, catalog book, sir percival david,art exhibition, uk asian art publisher" name="keywords"></meta>
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
+<title>出版-Publish-艺术亚洲-Art Asia Limited-Art Consulting-Asia Art Publisher-Exhibition Organiser-Asia Art London</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="wrap">
+<!--头部导航-->
+<div id="header">
+  <div id="logo"><a title="artasia 艺术亚洲" href="index.html"><img src="images/logo.png"  /></a></div>
+  <div id="language">
+   <a title="艺术亚洲微博" href="http://weibo.com/u/3094377191"><img src="images/xl.png" /></a>
+     <a title="中文" href="index.html"><img src="images/cgq.png" /></a>
+     <a title="English" href="en/index.html"><img src="images/egq.png" /></a>
+  </div>
+  <div id="nav">
+   <ul>
+    <li><a href="index.html"> 首 页</a></li>
+    <li><a href="about.html">  关于我们</a></li>
+    <li class="hover" ><a href="publish.html" style="color:#fff;">出 版</a></li>
+    <li><a href="advisory.html"> 专业咨询</a></li>
+    <li><a href="exhibition.html">展 览</a></li>
+    <li><a href="investment.html">投 资</a></li>
+    <!--<li><a href="news.html"> 新 聞</a></li>-->
+    <li><a href="contact.html"> 联系我们</a></li>
+   </ul>
+  </div>
+</div>
+<!--内容-->
+<div id="content1">
+   <div id="cl"></div>
+    <div id="cc">
+    <div id="mainleft">
+       <div class="roundbg"><b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b></div>
+       <div id="location">
+         <a target="_blank" href="index.html">首页</a><span>&raquo;</span>
+         <a target="_blank" href="publish.html">出版</a></div>
+         <div id="main_content">
+		 <!--左侧内容-->   
+         <div class="book">
+               <h3>付款成功</h3>
+               <span>感谢您的购买. </span>
+         </div>
+<!--左侧内容结束-->
+  		</div>
+ </div>
+<!--右侧-->
+       <div class="sideright">
+         <div class="photo1"><a href="#"><span></span><img src="images/4-1.jpg"alt="image" width="130" height="130" /></a></div>
+         <div class="photo1"><a href="#"><span></span><img src="images/4-2.jpg" alt="image" width="130" height="130" /></a></div>
+         <div class="list">
+           <p class="color">欢迎抢先订购。</p>
+           <p><span class="color">预定邮箱：</span>book@art-asia.co.uk</p>
+           <p>&nbsp;</p> 
+           <p>我们期待更多加入到推广中国文化和艺术的队伍。如您有兴趣赞助本书的出版和发行，请通过以下方式联系我们：</p>
+           <div class="clr10"></div>
+           <p><span class="color">电话：</span>+44020708463896666</p>
+           <p><span class="color">邮箱：</span>book@art-asia.co.uk</p>
+         </div>
+      </div>    
+	</div>
+    <div id="cr"></div>
+    <div class="push"></div>
+</div>
+</div><!--wrap 结束 -->
+<!--底部-->
+	<div id="foot">
+    <div class="footerwrap">
+    	<div class="left">
+  			©2013 Art Asia Limited
+        </div>
+        <div class="right">
+        	<div id="footernav">
+               <ul>
+                <li><a href="about.html"> 关于我们</a></li>
+                <li>|</li>
+                <li><a href="publish.html">出 版</a></li>
+                <li>|</li>
+                <li><a href="advisory.html"> 专业咨询</a></li>
+                <li>|</li>
+                <li><a href="exhibition.html">展 览</a></li>
+                <li>|</li>
+                <li><a href="investment.html">投 资</a></li>
+                <li>|</li>
+                <!--<li><a href="news.html"> 新 聞</a></li>-->
+                <li><a href="contact.html"> 联系我们</a></li>
+               </ul>
+  			</div>
+    	</div>
+    </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.sly.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// 占位符项目来填充列表的功能
+	function populate(container, count, offset){
+		var output = '';
+		offset = isNaN(offset) ? 0 : offset;
+		for(var i = 0; i<count; i++ ){
+			output += '<li>'+(offset+i)+'</li>';
+		}
+		return $(output).appendTo(container);
+	}
+
+	// 填充列表项
+	$('ul[data-items]').each(function(i,e){
+		var items = parseInt($(e).data('items'), 10);
+		populate(e, items);
+	});
+
+	// 主要调用部分
+	$(document).on('activated',function(event){
+		var $section = $(".scrollbox");
+		var $frame = $section.find('.frame'),
+			$ul = $frame.find('ul').eq(0),
+			$scrollbar = $section.find('.scrollbar'),
+			$buttons = $section.find('.controlbar [data-action]');
+		
+		populate($ul, 10);
+			
+		// 控制
+		$buttons.on('click',function(e){
+			var action = $(this).data('action');
+			switch(action){
+				case 'reset':
+				$frame.sly('toStart');
+				setTimeout(function(){
+					$ul.find('li').slice(10).remove();
+					$frame.sly('reload');
+				}, 200);
+				break;
+				default:
+				$frame.sly(action);
+			}
+		});
+		
+		$section.find(".slyWrap").each(function(i,e){
+			var cont = $(this),
+				frame = cont.find(".sly"),
+				slidee = frame.find("ul"),
+				scrollbar = cont.find(".scrollbar"),
+				pagesbar = cont.find(".pages"),
+				options = frame.data("options"),
+				controls = cont.find(".controls"),
+				prevButton = controls.find(".prev"),
+				nextButton = controls.find(".next"),
+				prevPageButton = controls.find(".prevPage"),
+				nextPageButton = controls.find(".nextPage");
+
+			options = $.extend({},options,{
+				scrollBar: scrollbar,
+				pagesBar: pagesbar,
+				prev: prevButton,
+				next: nextButton,
+				prevPage: prevPageButton,
+				nextPage: nextPageButton,
+				disabledClass: 'btn-disabled'
+			});
+
+			frame.sly( options );
+
+			cont.find("button").click(function(){
+				var action = $(this).data('action'),
+				arg = $(this).data('arg');
+				switch(action){
+					case 'add':
+					slidee.append(slidee.children().slice(-1).clone().removeClass().text(function(i,text){
+						return text/1 + 1;
+					}));
+					frame.sly('reload');
+					break;
+					case 'remove':
+					slidee.find("li").slice(-1).remove();
+					frame.sly('reload');
+					break;
+					default:
+					frame.sly(action, arg);
+				}
+			});
+
+		});
+	
+	}).trigger('activated');
+	
+});
+</script>
+</body>
+</html>

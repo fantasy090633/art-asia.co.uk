@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://art-asia.co.uk/sitemap.xml
