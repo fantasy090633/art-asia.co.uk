@@ -27,9 +27,11 @@
 <div id="header">
   <div id="logo"><a title="artasia 艺术亚洲" href="index.html"><img src="images/logo.png"  /></a></div>
   <div id="language">
-   <a title="艺术亚洲微博" href="http://weibo.com/u/3094377191"><img src="images/xl.png" /></a>
-     <a title="中文" href="index.html"><img src="images/cgq.png" /></a>
-     <a title="English" href="en/index.html"><img src="images/egq.png" /></a>
+        <a title="艺术亚洲微博" target="_blank" href="http://weibo.com/u/3094377191"><img src="images/xl.png" /></a>
+        <a title="艺术亚洲脸书" target="_blank" href="https://www.facebook.com/pages/Art-Asia-%E8%89%BA%E6%9C%AF%E4%BA%9A%E6%B4%B2/647403505375234?ref=hl"><img src="images/fb.png" /></a>
+        <a title="艺术亚洲领英" target="_blank" href="https://www.linkedin.com/company/5356030?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A1144657451412689691477%2CVSRPtargetId%3A5356030%2CVSRPcmpt%3Acompanies_cluster"><img src="images/in.png" /></a>
+        <a title="中文" href="index.html"><img src="images/cgq.png" /></a>
+        <a title="English" href="en/index.html"><img src="images/egq.png" /></a>
   </div>
   <div id="nav">
    <ul>
@@ -53,7 +55,7 @@
        <div class="roundbg"><b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b></div>
        <div id="location">
          <a target="_blank" href="index.html">首页</a><span>&raquo;</span>
-         <a target="_blank" href="#">联系我們</a>
+         <a target="_blank" href="javascript:void(0);">联系我們</a>
        </div>
 		 <div id="main_content" class="contactmain" style="height:650px !important;">
          <h2>联系我們</h2>
@@ -61,10 +63,11 @@
          <img src="images/lx-ditu.jpg" usemap="#Map">
          </p>
          <map name="Map">
-           <area shape="rect" coords="201,80,252,133" href="#" id="showuk" title="伦敦办事处">
-           <area shape="rect" coords="320,141,354,188" href="#" id="showindia" title="孟买办事处">
-           <area shape="rect" coords="320,128,413,229" href="#" id="showchina" title="中国办事处">
-           <area shape="rect" coords="108,95,162,142" href="#" id="showusa" title="波士顿办事处">
+           <area shape="rect" coords="228,78,241,91" href="javascript:void(0);" id="showuk" title="伦敦办事处">
+           <area shape="rect" coords="331,124,344,137" href="javascript:void(0);" id="showindia" title="孟买办事处">
+           <area shape="rect" coords="368,85,381,99" href="javascript:void(0);" id="showchina" title="北京办事处">
+           <area shape="rect" coords="378,119,392,132" href="javascript:void(0);" id="showhk" title="香港办事处">
+           <area shape="rect" coords="138,84,152,96" href="javascript:void(0);" id="showusa" title="波士顿办事处">
          </map>
          <div class="clr30"></div>
          <div id="location_uk" class="location_info">
@@ -78,10 +81,10 @@
          <div id="location_china" style="display:none;" class="location_info">
 		 
          <a name="china"></a>  
-		 <h3>上海办事处</h3>
-         <p class="em" style="position:relative; top:-5px;">Haren<br/>
-          地址: 上海市虹口区溧阳路111号北外滩艺术园区210室<br/>
-          邮箱: haren@art-asia.co.uk<br/>
+		 <h3>北京办事处</h3>
+         <p class="em" style="position:relative; top:-5px;">杨硕<br/>
+          地址: 北京市东城区东水井胡同11号北京INN大厦4号楼B0710室<br/>
+          邮箱: bj@art-asia.co.uk<br/>
          </p>	 
 <div class="clr5"></div>		 
          <h3>香港办事处</h3>
@@ -115,10 +118,10 @@
 <!--右侧-->
        <div id="rcontent">
        <div class="photo0"><span class="empty"></span></div>
-        <div class="photo1"><a href="#" id="sideuk"><span></span><div class="locationwrap"><img src="images/uk.jpg" alt="image" /></div></a></div>
-        <div class="photo2"><a href="#" id="sideusa"><span></span><div class="locationwrap"><img src="images/us.jpg" alt="image" /></div></a></div>
-        <div class="photo2"><a href="#" id="sidechina"><span></span><div class="locationwrap"><img src="images/china.jpg" alt="image" /></div></a></div>
-        <div class="photo3"><a href="#" id="sideindia"><span></span><div class="locationwrap"><img src="images/india.jpg" alt="image" /></div></a></div>
+        <div class="photo1"><a href="javascript:void(0);" id="sideuk"><span></span><div class="locationwrap"><img src="images/uk.jpg" alt="image" /></div></a></div>
+        <div class="photo2"><a href="javascript:void(0);" id="sideusa"><span></span><div class="locationwrap"><img src="images/us.jpg" alt="image" /></div></a></div>
+        <div class="photo2"><a href="javascript:void(0);" id="sidechina"><span></span><div class="locationwrap"><img src="images/china.jpg" alt="image" /></div></a></div>
+        <div class="photo3"><a href="javascript:void(0);" id="sideindia"><span></span><div class="locationwrap"><img src="images/india.jpg" alt="image" /></div></a></div>
         <div class="photo0"><span class="empty"></span></div>
        </div>     
 </div>
@@ -176,9 +179,15 @@ $(function() {
 			  $("#location_uk,#location_china,#location_india,#location_usa").stop(true).hide();
 			  $("#location_china").fadeIn();
 			  return false;
-			  });  
-			  
-	$("#showusa,#sideusa").click(function(){
+			  });
+
+    $("#showhk,#sidechina").click(function(){
+        $("#location_uk,#location_china,#location_india,#location_usa").stop(true).hide();
+        $("#location_china").fadeIn();
+        return false;
+    });
+
+    $("#showusa,#sideusa").click(function(){
 			  $("#location_uk,#location_china,#location_india,#location_usa").stop(true).hide();
 			  $("#location_usa").fadeIn();
 			  return false;
