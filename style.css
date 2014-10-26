@@ -674,7 +674,7 @@ b.rtop b.r4, b.rbottom b.r4{
 
 #footernav ul{display:inline; line-height:75px;}
 #footernav ul li{ list-style-type:none; display:inline; }
-#footernav ul li a{ color:#fff; font-size:10px; margin:0 25px;}
+#footernav ul li a{ color:#fff; font-size:10px; margin:0 20px;}
 #vertical{
 	float:left;
 	width:600px;
