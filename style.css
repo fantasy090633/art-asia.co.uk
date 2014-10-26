@@ -69,7 +69,7 @@ p{
 	height:30px;
 	}	
 .toleft{ float:left;}
-.toright{ float:right;}	
+.toright{ float:right;}
 #wrap{ 
 min-height: 100%;
 height: auto !important;
@@ -744,4 +744,10 @@ b.rtop b.r4, b.rbottom b.r4{
 	cursor:pointer;
 	line-height:0;
 	}
-.hint{ font-size:11px; line-height:120%; padding:0 20px 0 50px; display:block;}	
+.hint{ font-size:11px; line-height:120%; padding:0 20px 0 50px; display:block;}
+/* 媒体报道 */
+.newslist{ float: left; width: 590px; margin-bottom: 12px; }
+.newslist .newstitleshow{ float: left; }
+.newslist .newstitleshow a{ color: #000000; }
+.newslist .newsdateshow{ float: right; color: #818181; }
+.newscrw .newscrwimg { margin-right: 19px; }
