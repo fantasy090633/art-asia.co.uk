@@ -751,3 +751,4 @@ b.rtop b.r4, b.rbottom b.r4{
 .newslist .newstitleshow a{ color: #000000; }
 .newslist .newsdateshow{ float: right; color: #818181; }
 .newscrw .newscrwimg { margin-right: 19px; }
+.news_p{ text-indent:2em; }
